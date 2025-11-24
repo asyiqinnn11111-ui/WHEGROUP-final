@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHE Group - Exclusive Property Investment | Sarawak</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WGGH9Y62K4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WGGH9Y62K4');
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #C9A961;
+            --gold-dark: #A68A4D;
+            --black: #0D0D0D;
+            --black-light: #1A1A1A;
+            --white: #FEFEFE;
+            --cream: #F5F3EF;
+            --gray: #8A8A8A;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+        }
+
+        /* LOADER */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s, visibility 1s;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            width: 200px;
+            margin-bottom: 2.5rem;
+            animation: logoGlowPulse 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(201, 169, 97, 0.8));
+        }
+
+        @keyframes logoGlowPulse {
+            0%, 100% { 
+                opacity: 0.6;
+                transform: scale(1);
+                filter: drop-shadow(0 0 30px rgba(201, 169, 97, 0.8));
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1.05);
+                filter: drop-shadow(0 0 60px rgba(201, 169, 97, 1));
+            }
+        }
+
+        .loader-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+            animation: loaderPulse 2s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(201, 169, 97, 0.6);
+        }
+
+        @keyframes loaderPulse {
+            0%, 100% { 
+                opacity: 0.5;
+                transform: scale(1);
+                text-shadow: 0 0 20px rgba(201, 169, 97, 0.6);
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1.05);
+                text-shadow: 0 0 40px rgba(201, 169, 97, 1);
+            }
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem 5%;
+            z-index: 1000;
+            background: transparent;
+            transition: all 0.5s;
+        }
+
+        nav.scrolled {
+            background: rgba(13, 13, 13, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 5%;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 70px;
+            transition: all 0.3s;
+        }
+
+        nav.scrolled .nav-logo img {
+            height: 50px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 400;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--black);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, rgba(13, 13, 13, 0.95), rgba(26, 26, 26, 0.7)),
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80') center/cover;
+            animation: slowZoom 30s ease infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 5%;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* BIGGER FLOATING LOGO */
+        .hero-logo-float {
+            width: 200px;
+            margin: 0 auto 2rem;
+            opacity: 0;
+            animation: logoFloat 3s ease 0.3s forwards, float 6s ease-in-out 3.3s infinite;
+            filter: drop-shadow(0 15px 40px rgba(201, 169, 97, 0.7));
+        }
+
+        @keyframes logoFloat {
+            from { opacity: 0; transform: translateY(-80px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-logo-float img {
+            width: 100%;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.6rem;
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(4rem, 9vw, 8.5rem);
+            font-weight: 700;
+            line-height: 0.95;
+            margin-bottom: 1.2rem;
+            color: #D4AF37;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-title span {
+            display: block;
+            color: var(--white);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 0.38em;
+            margin-top: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: none;
+            text-shadow: none;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(0.9rem, 1.6vw, 1.15rem);
+            color: var(--cream);
+            max-width: 650px;
+            margin: 0 auto 3.5rem;
+            font-weight: 300;
+            line-height: 1.9;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 3.5rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.5s;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.1s forwards;
+            position: relative;
+            overflow: hidden;
+            font-weight: 400;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gold);
+            transition: left 0.5s;
+            z-index: -1;
+        }
+
+        .hero-cta:hover::before {
+            left: 0;
+        }
+
+        .hero-cta:hover {
+            color: var(--black);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            display: flex;
+            gap: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.3s forwards;
+        }
+
+        .hero-stat-item {
+            text-align: right;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+
+        .hero-stat-item::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: linear-gradient(180deg, transparent, var(--gold), transparent);
+        }
+
+        .hero-stat-item:last-child::after {
+            display: none;
+        }
+
+        .hero-stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 400;
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(201, 169, 97, 0.2);
+        }
+
+        .hero-stat-label {
+            font-size: 0.6rem;
+            color: var(--gray);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        /* LUXURY DIVIDER */
+        .luxury-divider {
+            text-align: center;
+            padding: 8rem 5%;
+            background: var(--black-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .divider-line {
+            width: 100px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto 3rem;
+        }
+
+        .divider-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--gold);
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .divider-desc {
+            font-size: 0.95rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* ABOUT - SPLIT SECTION */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+        }
+
+        .about-left {
+            background: var(--black);
+            padding: 10% 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-eyebrow {
+            font-size: 0.6rem;
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .about-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 4.5vw, 4rem);
+            color: var(--white);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-text {
+            color: var(--cream);
+            font-size: 0.95rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .about-signature {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.2);
+        }
+
+        .signature-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+            font-style: italic;
+        }
+
+        .signature-title {
+            font-size: 0.65rem;
+            color: var(--gray);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .about-right {
+            background: var(--black-light);
+            padding: 8% 6%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .director-card {
+            background: rgba(13, 13, 13, 0.5);
+            padding: 3rem;
+            border-left: 3px solid var(--gold);
+            transition: all 0.4s;
+        }
+
+        .director-card:hover {
+            background: rgba(13, 13, 13, 0.8);
+            transform: translateX(20px);
+        }
+
+        .director-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .director-img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+        }
+
+        .director-info h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 0.3rem;
+            font-weight: 400;
+        }
+
+        .director-info p {
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.2rem;
+        }
+
+        .director-bio {
+            color: var(--gray);
+            font-size: 0.85rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* BOARD OF DIRECTORS */
+        .board-section {
+            background: var(--black);
+            padding: 10% 5%;
+            border-top: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .board-header {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto 6rem;
+        }
+
+        .board-eyebrow {
+            font-size: 0.6rem;
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .board-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 5rem);
+            color: var(--white);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .board-desc {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .board-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5rem;
+        }
+
+        .board-member {
+            background: var(--black-light);
+            padding: 4rem 3.5rem;
+            text-align: center;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            transition: all 0.5s;
+            position: relative;
+        }
+
+        .board-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            transform: scaleX(0);
+            transition: transform 0.6s;
+        }
+
+        .board-member:hover::before {
+            transform: scaleX(1);
+        }
+
+        .board-member:hover {
+            border-color: var(--gold);
+            transform: translateY(-15px);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+        }
+
+        .board-member-img {
+            width: 180px;
+            height: 180px;
+            border: 4px solid var(--gold);
+            margin: 0 auto 2.5rem;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: all 0.5s;
+        }
+
+        .board-member:hover .board-member-img {
+            filter: grayscale(0%);
+            border-color: var(--gold-dark);
+            transform: scale(1.05);
+        }
+
+        .board-member-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            color: var(--white);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .board-member-subtitle {
+            font-size: 1rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .board-member-position {
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .board-member-award {
+            background: rgba(201, 169, 97, 0.05);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .board-member-award-title {
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .board-member-award p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* PROJECTS - ASYMMETRIC LAYOUT */
+        .projects-section {
+            background: var(--black);
+            padding: 10% 0;
+        }
+
+        .section-intro {
+            max-width: 1600px;
+            margin: 0 auto 8rem;
+            padding: 0 5%;
+        }
+
+        .section-intro h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 5.5rem);
+            color: var(--white);
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .section-intro p {
+            font-size: 1rem;
+            color: var(--gray);
+            max-width: 700px;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* PROJECT CARD - LARGE */
+        .project-large {
+            max-width: 1600px;
+            margin: 0 auto 8rem;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .project-large:nth-child(even) {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        .project-large:nth-child(even) .project-image {
+            order: 2;
+        }
+
+        .project-image {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13, 13, 13, 0.5), transparent);
+            transition: all 0.6s;
+        }
+
+        .project-large:hover .project-image::before {
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.3), transparent);
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: var(--gold);
+            color: var(--black);
+            padding: 10px 25px;
+            font-size: 0.55rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 3rem 0;
+        }
+
+        .project-number {
+            font-size: 0.55rem;
+            color: var(--gold);
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .project-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+            color: var(--white);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .project-location {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .project-desc {
+            color: var(--cream);
+            line-height: 1.9;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-detail-item {
+            padding: 1.5rem;
+            background: rgba(26, 26, 26, 0.5);
+            border-left: 2px solid var(--gold);
+        }
+
+        .detail-label {
+            font-size: 0.6rem;
+            color: var(--gray);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .detail-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .project-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.4s;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .project-action:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.4);
+        }
+
+        /* SERVICES - MINIMAL CARDS */
+        .services-section {
+            background: var(--black-light);
+            padding: 10% 5%;
+        }
+
+        .services-grid {
+            max-width: 1600px;
+            margin: 5rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 3.5rem 3rem;
+            background: var(--black);
+            border: 1px solid rgba(201, 169, 97, 0.1);
+            transition: all 0.5s;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-20px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-icon {
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .service-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .service-desc {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        /* CONTACT - ELEGANT */
+        .contact-section {
+            background: var(--black);
+            padding: 10% 5%;
+        }
+
+        .contact-wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 8rem;
+        }
+
+        .contact-left h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 4.5vw, 4rem);
+            color: var(--gold);
+            font-weight: 300;
+            margin-bottom: 4rem;
+        }
+
+        .contact-item {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            font-size: 0.6rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .contact-value {
+            color: var(--cream);
+            font-size: 1rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .contact-form-wrapper {
+            background: var(--black-light);
+            padding: 4rem;
+        }
+
+        .contact-form-wrapper h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--white);
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.6rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--black);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-weight: 300;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.3rem;
+            background: var(--gold);
+            border: none;
+            color: var(--black);
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s;
+        }
+
+        .form-submit:hover {
+            background: var(--gold-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.4);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--black-light);
+            padding: 5rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .footer-logo {
+            height: 70px;
+            margin-bottom: 2.5rem;
+            opacity: 0.8;
+        }
+
+        .footer-text {
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .footer-copy {
+            color: var(--gray);
+            font-size: 0.7rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.1);
+            margin-top: 3rem;
+            font-weight: 300;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.98);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            max-width: 1400px;
+            margin: 3% auto;
+            background: var(--black-light);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+        }
+
+        .modal-close {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+            font-size: 3rem;
+            color: var(--gold);
+            cursor: pointer;
+            z-index: 10001;
+            transition: all 0.3s;
+            background: rgba(13, 13, 13, 0.9);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--gold);
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .modal-header {
+            padding: 5rem;
+            text-align: center;
+            background: var(--black);
+            border-bottom: 3px solid var(--gold);
+            box-shadow: 0 5px 30px rgba(201, 169, 97, 0.2);
+        }
+
+        .modal-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .modal-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .modal-body {
+            padding: 5rem;
+        }
+
+        .modal-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .modal-gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 2px solid rgba(201, 169, 97, 0.2);
+            transition: all 0.4s;
+        }
+
+        .modal-gallery img:hover {
+            border-color: var(--gold);
+            transform: scale(1.02);
+        }
+
+        .modal-section {
+            margin-bottom: 4rem;
+        }
+
+        .modal-section h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .price-highlight {
+            background: rgba(201, 169, 97, 0.1);
+            border: 2px solid rgba(201, 169, 97, 0.3);
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .price-highlight h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .house-types-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .house-type {
+            background: var(--black);
+            padding: 3rem;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            transition: all 0.4s;
+        }
+
+        .house-type:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .house-type h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .spec-list li span:first-child {
+            color: var(--cream);
+        }
+
+        .spec-list li span:last-child {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-box {
+            background: var(--black);
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            text-align: center;
+            transition: all 0.4s;
+        }
+
+        .feature-box:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .feature-box .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h5 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .feature-box p {
+            color: var(--gray);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .specifications {
+            background: var(--black);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            padding: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .specifications h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .spec-category {
+            margin-bottom: 2rem;
+        }
+
+        .spec-category h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .spec-category ul {
+            list-style: none;
+        }
+
+        .spec-category li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+            color: var(--gray);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .spec-category li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .modal-cta-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .about-section,
+            .project-large,
+            .contact-wrapper,
+            .board-grid,
+            .house-types-grid,
+            .modal-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .project-large:nth-child(even) .project-image {
+                order: 1;
+            }
+
+            .hero-stats {
+                position: static;
+                margin-top: 4rem;
+                justify-content: center;
+            }
+
+            .services-grid,
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-logo-float {
+                width: 150px;
+            }
+
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+
+            .board-member {
+                padding: 3rem 2rem;
+            }
+
+            .services-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-body {
+                padding: 3rem 2rem;
+            }
+
+            .modal-header {
+                padding: 3rem 2rem;
+            }
+
+            .modal-cta-section a {
+                display: flex !important;
+                width: 100%;
+                margin-right: 0 !important;
+                margin-bottom: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader-content">
+            <img src="https://i.imgur.com/znXpPMl.png" alt="WHE Group" class="loader-logo">
+            <div class="loader-text">PREMIUM DEVELOPMENT</div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://i.imgur.com/znXpPMl.png" alt="WHE Group">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO with BIGGER FLOATING LOGO ABOVE COMPANY NAME -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <!-- BIGGER FLOATING LOGO -->
+            <div class="hero-logo-float">
+                <img src="https://i.imgur.com/znXpPMl.png" alt="WHE Group">
+            </div>
+            <div class="hero-eyebrow">EST. 2009 — SARAWAK, MALAYSIA</div>
+            <h1 class="hero-title">
+                WHE GROUP<br>
+                <span>Group of Companies</span>
+            </h1>
+            <p class="hero-subtitle">Transforming prime locations across Sarawak into prestigious residential and commercial masterpieces. Where vision meets legacy.</p>
+            <a href="#portfolio" class="hero-cta">
+                <span>View Portfolio</span>
+                <span>→</span>
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat-item">
+                <div class="hero-stat-number">15+</div>
+                <div class="hero-stat-label">Years Legacy</div>
+            </div>
+            <div class="hero-stat-item">
+                <div class="hero-stat-number">RM100M+</div>
+                <div class="hero-stat-label">Property Value</div>
+            </div>
+            <div class="hero-stat-item">
+                <div class="hero-stat-number">500+</div>
+                <div class="hero-stat-label">Satisfied Clients</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LUXURY DIVIDER -->
+    <section class="luxury-divider">
+        <div class="divider-line"></div>
+        <div class="divider-text">"Excellence is not an act, but a habit"</div>
+        <p class="divider-desc">Every project we undertake is a testament to our commitment to quality, innovation, and the pursuit of architectural excellence that stands the test of time.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-left">
+            <div class="about-eyebrow">LEGACY & LEADERSHIP</div>
+            <h2 class="about-title">Building Tomorrow's Communities</h2>
+            <p class="about-text">For over 15 years, WHE Group has been the cornerstone of premium property development in Sarawak. Our portfolio spans prestigious residential estates and landmark commercial properties, each meticulously crafted to deliver exceptional value and enduring quality.</p>
+            <p class="about-text">Under visionary leadership, we've established ourselves as Sarawak's most trusted name in property development, combining local expertise with world-class standards to create spaces where communities thrive and investments flourish.</p>
+            <div class="about-signature">
+                <div class="signature-name">Temenggong Dato Sri Haji Wan Hamid Edruce</div>
+                <div class="signature-title">Bin Tuanku Haji Mohammad</div>
+                <div class="signature-title">Founder & Chief Executive Officer</div>
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="director-card">
+                <div class="director-header">
+                    <img src="https://i.imgur.com/Mw05aao.jpg" alt="Founder" class="director-img">
+                    <div class="director-info">
+                        <h3>Temenggong Dato Sri Haji Wan Hamid Edruce</h3>
+                        <p>Bin Tuanku Haji Mohammad</p>
+                        <p>Founder & Chief Executive Officer</p>
+                    </div>
+                </div>
+                <div class="director-bio">
+                    Awarded Dato Sri by Panglima Negara Bintang Sarawak (P.N.B.S) in 2024 for outstanding contributions to Sarawak's socio-economic development and excellence in property development.
+                </div>
+            </div>
+            <div class="director-card">
+                <div class="director-header">
+                    <img src="https://i.imgur.com/s84lMMM.jpg" alt="MD" class="director-img">
+                    <div class="director-info">
+                        <h3>Councillor Syed Hamzah</h3>
+                        <p>Bin Temenggong Dato' Sri Hj Wan Hamid Edruce</p>
+                        <p>Managing Director</p>
+                    </div>
+                </div>
+                <div class="director-bio">
+                    Leading WHE Group's strategic vision and operations, driving innovation and sustainable growth across all business verticals with a focus on excellence.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOARD OF DIRECTORS -->
+    <section class="board-section">
+        <div class="board-header">
+            <div class="board-eyebrow">LEADERSHIP EXCELLENCE</div>
+            <h2 class="board-title">Board of Directors</h2>
+            <p class="board-desc">Visionary leadership driving excellence and innovation in Sarawak's property development landscape.</p>
+        </div>
+        <div class="board-grid">
+            <div class="board-member">
+                <img src="https://i.imgur.com/Mw05aao.jpg" alt="Founder & CEO" class="board-member-img">
+                <h3 class="board-member-name">Temenggong Dato Sri Haji<br>Wan Hamid Edruce</h3>
+                <p class="board-member-subtitle">Bin Tuanku Haji Mohammad</p>
+                <p class="board-member-position">Founder & Chief Executive Officer</p>
+                <div class="board-member-award">
+                    <div class="board-member-award-title">Royal Recognition</div>
+                    <p>Awarded Dato Sri by Panglima Negara Bintang Sarawak (P.N.B.S) in 2024 for outstanding contributions to Sarawak's socio-economic development and excellence in property development.</p>
+                </div>
+            </div>
+            <div class="board-member">
+                <img src="https://i.imgur.com/s84lMMM.jpg" alt="Managing Director" class="board-member-img">
+                <h3 class="board-member-name">Councillor<br>Syed Hamzah</h3>
+                <p class="board-member-subtitle">Bin Temenggong Dato' Sri Hj Wan Hamid Edruce</p>
+                <p class="board-member-position">Managing Director</p>
+                <div class="board-member-award">
+                    <div class="board-member-award-title">Leadership Excellence</div>
+                    <p>Leading WHE Group's strategic vision and operations, driving innovation and sustainable growth across all business verticals with unwavering focus on excellence and quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="portfolio">
+        <div class="section-intro">
+            <h2>Investment Portfolio</h2>
+            <p>Each project represents a unique opportunity for discerning investors seeking premium returns in Sarawak's thriving property market.</p>
+        </div>
+
+        <!-- PROJECT 1 -->
+        <div class="project-large">
+            <div class="project-image" style="background-image: url('https://i.imgur.com/sz2n4Jl.jpg');">
+                <div class="project-badge">Investment Opportunity</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJECT 01</div>
+                <h3 class="project-title">Kemuyang Avenue Phase 5</h3>
+                <p class="project-location">📍 Sibu, Sarawak</p>
+                <p class="project-desc">Premium residential development offering modern homes in a harmonious community setting. Strategic location with exceptional connectivity and growth potential.</p>
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">Starting From</div>
+                        <div class="detail-value">RM325K</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Units Available</div>
+                        <div class="detail-value">32</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Completion</div>
+                        <div class="detail-value">2029</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Type</div>
+                        <div class="detail-value">Terrace</div>
+                    </div>
+                </div>
+                <button class="project-action" onclick="openModal()">
+                    <span>View Details</span>
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-large">
+            <div class="project-image" style="background-image: url('https://i.imgur.com/ZOCk2Wt.jpg');">
+                <div class="project-badge">Hospitality</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJECT 02</div>
+                <h3 class="project-title">ZUHRA HOTEL</h3>
+                <p class="project-location">📍 Sibu, Sarawak</p>
+                <p class="project-desc">Boutique hospitality development delivering modern comfort and strategic business location advantages in Sibu's growing commercial district.</p>
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">Category</div>
+                        <div class="detail-value">Hotel</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">Operational</div>
+                    </div>
+                </div>
+                <a href="tel:+60146812595" class="project-action">
+                    <span>Contact Us</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-large">
+            <div class="project-image" style="background-image: url('https://i.imgur.com/Y5jkU86.jpg');">
+                <div class="project-badge">Completed</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJECT 03</div>
+                <h3 class="project-title">ZAYDA VISTA</h3>
+                <p class="project-location">📍 Petrajaya, Kuching</p>
+                <p class="project-desc">Premium double storey terrace development in Kuching's prestigious Petrajaya district. A testament to quality construction and design excellence.</p>
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">Starting From</div>
+                        <div class="detail-value">RM500K</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">Sold Out</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-large">
+            <div class="project-image" style="background-image: url('https://i.imgur.com/mxEzyi9.jpg');">
+                <div class="project-badge">In Progress</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJECT 04</div>
+                <h3 class="project-title">Spektra House</h3>
+                <p class="project-location">📍 Sibu, Sarawak</p>
+                <p class="project-desc">Contemporary residential development showcasing modern architectural design and quality construction in a prime Sibu location.</p>
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">Type</div>
+                        <div class="detail-value">Residential</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Status</div>
+                        <div class="detail-value">Progress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="project-large">
+            <div class="project-image" style="background-image: url('https://i.imgur.com/OSTrsec.jpg');">
+                <div class="project-badge">Commercial</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJECT 05</div>
+                <h3 class="project-title">WHE Building</h3>
+                <p class="project-location">📍 Jalan Kampung Datu, Sibu</p>
+                <p class="project-desc">Modern commercial shoplots in strategic business location, offering flexible spaces ideal for various business operations.</p>
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">Type</div>
+                        <div class="detail-value">Commercial</div>
+                    </div>
+                    <div class="project-detail-item">
+                        <div class="detail-label">Leasing</div>
+                        <div class="detail-value">Available</div>
+                    </div>
+                </div>
+                <a href="tel:+60146812595" class="project-action">
+                    <span>Inquire Now</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="section-intro">
+            <h2>Investment Services</h2>
+            <p>Comprehensive property solutions tailored for discerning investors seeking premium returns.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3 class="service-title">Property Development</h3>
+                <p class="service-desc">Investment-grade residential and commercial developments with proven track records and exceptional quality standards.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3 class="service-title">Investment Advisory</h3>
+                <p class="service-desc">Expert guidance on property investment opportunities with transparent valuations and market insights.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔑</div>
+                <h3 class="service-title">Property Management</h3>
+                <p class="service-desc">Professional management services ensuring optimal returns and property value preservation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-left">
+                <h2>Let's Discuss Your Investment</h2>
+                <div class="contact-item">
+                    <div class="contact-label">Office Address</div>
+                    <div class="contact-value">No.103, Jalan Kampung Nyabor<br>96000 Sibu, Sarawak<br>Malaysia</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Investment Inquiries</div>
+                    <div class="contact-value">+60 14-681 2595<br><a href="https://wa.me/60146812595" style="color: var(--gold); text-decoration: none;">WhatsApp</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Office Hours</div>
+                    <div class="contact-value">Monday — Friday<br>10:00 AM — 5:00 PM<br>By Appointment Only</div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <h3>Investment Inquiry</h3>
+                <form action="https://formspree.io/f/xqajpyvj" method="POST">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="_replyto" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Investment Interest</label>
+                        <input type="text" name="interest" placeholder="e.g., Kemuyang Avenue Phase 5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="Investment Inquiry - WHE Group">
+                    <button type="submit" class="form-submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="https://i.imgur.com/znXpPMl.png" alt="WHE Group" class="footer-logo">
+        <p class="footer-text">WHE Group — Transforming Spaces, Inspiring Lives<br>Premier Property Development | Sarawak, Malaysia</p>
+        <div class="footer-copy">
+            © 2024 WHE Group. All Rights Reserved.<br>
+            Registered Office: No.103, Jalan Kampung Nyabor, 96000 Sibu, Sarawak
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Kemuyang Avenue Phase 5</h2>
+                <p>📍 Sibu, Sarawak | Home of Harmony Community</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <img src="https://i.imgur.com/3T0LoSz.jpg" alt="Kemuyang Avenue Single Storey">
+                    <img src="https://i.imgur.com/DiR0EMQ.jpg" alt="Kemuyang Avenue Double Storey">
+                </div>
+
+                <div class="price-highlight">
+                    <h3>RM325,000 - RM430,000</h3>
+                    <p style="color: var(--gold); font-size: 1.1rem; margin: 0;">32 Units Available | Single & Double Storey Options</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Property Types</h3>
+                    <div class="house-types-grid">
+                        <div class="house-type">
+                            <h4>Single Storey Terrace</h4>
+                            <ul class="spec-list">
+                                <li><span>Bedrooms:</span> <span>3</span></li>
+                                <li><span>Bathrooms:</span> <span>2</span></li>
+                                <li><span>Land (Intermediate):</span> <span>From 1,679 sq.ft</span></li>
+                                <li><span>Land (Corner):</span> <span>From 2,935 sq.ft</span></li>
+                                <li><span>Built-Up Area:</span> <span>From 964 sq.ft</span></li>
+                                <li><span>Price (Intermediate):</span> <span>From RM325,000</span></li>
+                                <li><span>Price (Corner):</span> <span>From RM350,000</span></li>
+                                <li><span>Units Available:</span> <span>10 Units</span></li>
+                            </ul>
+                        </div>
+                        <div class="house-type">
+                            <h4>Double Storey Terrace</h4>
+                            <ul class="spec-list">
+                                <li><span>Bedrooms:</span> <span>3</span></li>
+                                <li><span>Bathrooms:</span> <span>3</span></li>
+                                <li><span>Type A Built-Up:</span> <span>From 1,021 sq.ft</span></li>
+                                <li><span>Type B Built-Up:</span> <span>From 1,048 sq.ft</span></li>
+                                <li><span>Price Type A:</span> <span>From RM375,000</span></li>
+                                <li><span>Price Type B:</span> <span>From RM395,000</span></li>
+                                <li><span>Units Available:</span> <span>22 Units</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features & Benefits</h3>
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <div class="icon">🏡</div>
+                            <h5>Modern Design</h5>
+                            <p>Contemporary architecture with premium finishes</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">✨</div>
+                            <h5>Connected Living</h5>
+                            <p>Open concept areas for modern lifestyle</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">🚗</div>
+                            <h5>Car Porch</h5>
+                            <p>Covered parking for convenience</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">💰</div>
+                            <h5>Early Bird Pricing</h5>
+                            <p>Special launch prices available now</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">📄</div>
+                            <h5>SPA Paid</h5>
+                            <p>Legal fees covered by developer</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">🏦</div>
+                            <h5>Full Loan Available</h5>
+                            <p>Terms & conditions apply</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specifications">
+                    <h3>Complete Specifications</h3>
+                    
+                    <div class="spec-category">
+                        <h4>Structure & Build</h4>
+                        <ul>
+                            <li>Reinforced Concrete Frameworks</li>
+                            <li>Internal & External Red Earthen Bricks</li>
+                            <li>0.42mm TCT thick colourbond roofing</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-category">
+                        <h4>Doors & Windows</h4>
+                        <ul>
+                            <li>H.W frame plywood flushed doors</li>
+                            <li>Aluminium frame sliding glass windows</li>
+                            <li>PVC flushed doors for bathrooms</li>
+                        </ul>
+                    </div>
+
+                    <div class="spec-category">
+                        <h4>Finishes</h4>
+                        <ul>
+                            <li>Weatherbound for exterior walls</li>
+                            <li>Ceramic floor tiles throughout</li>
+                            <li>Gypsum plaster ceiling</li>
+                            <li>1800mm Chain link fencing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Prime Location</h3>
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <div class="icon">✈️</div>
+                            <h5>14 KM</h5>
+                            <p>Sibu Airport</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">🏥</div>
+                            <h5>13 KM</h5>
+                            <p>Sibu Hospital</p>
+                        </div>
+                        <div class="feature-box">
+                            <div class="icon">🛍️</div>
+                            <h5>17 KM</h5>
+                            <p>Star Megamall</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-cta-section">
+                    <a href="https://wa.me/60146812595?text=Hi!%20I'm%20interested%20in%20Kemuyang%20Avenue%20Phase%205" target="_blank" class="project-action" style="text-decoration: none; display: inline-flex; margin-right: 2rem; margin-bottom: 1rem;">
+                        <span>WhatsApp Investment Inquiry</span>
+                        <span>→</span>
+                    </a>
+                    <a href="tel:+60146812595" class="project-action" style="text-decoration: none; display: inline-flex; background: var(--gold); color: var(--black); border: 1px solid var(--gold);">
+                        <span>Call: 014-681 2595</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/692142569bd603195c346825/1jakum9gj';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+    <script>
+        // LOADER
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loader').classList.add('hidden');
+            }, 2500);
+        });
+
+        // NAV SCROLL
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // MODAL
+        function openModal() {
+            document.getElementById('modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
